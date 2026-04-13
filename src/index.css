@@ -1,2 +1,20 @@
 @import "tailwindcss";
 @plugin "daisyui";
+
+
+@theme{
+    --color-pri-green :#244D3F;
+    --color-sec :#1F2937;
+}
+
+
+
+
+a.active{
+    @apply
+     bg-pri-green text-white rounded-lg duration-300
+}
+.link-btn{
+    @apply
+    flex items-center gap-1 py-2 px-4 rounded-lg   cursor-pointer
+}

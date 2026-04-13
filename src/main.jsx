@@ -1,10 +1,12 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
-import App from './App.jsx'
 import { createBrowserRouter, RouterProvider } from 'react-router'
 import Roots from './Router/Roots.jsx'
-import Home from './Pages/Home.jsx'
+import Home from './Pages/Home Page/Home.jsx'
+import Timeline from './Pages/Timeline Page/Timeline.jsx'
+import Stats from './Pages/Stats Page/Stats.jsx'
+
 
 
 const router = createBrowserRouter([
@@ -15,6 +17,14 @@ const router = createBrowserRouter([
       {
       index : true,
       Component:Home
+    },
+    {
+      path : '/timeline',
+      Component: Timeline
+    },
+    {
+      path : '/stats',
+      Component : Stats
     }
   ]
   },
