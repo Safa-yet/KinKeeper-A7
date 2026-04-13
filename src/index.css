@@ -9,6 +9,12 @@
 
 
 
+.container-main {
+    @apply
+    max-w-[70%] mx-auto
+}
+
+
 
 a.active{
     @apply

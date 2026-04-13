@@ -3,6 +3,7 @@ import { FaChartLine } from "react-icons/fa";
 import { IoTimeOutline } from "react-icons/io5";
 import { RiHome4Line } from "react-icons/ri";
 import { Link, NavLink } from "react-router";
+import logo from "../../assets/logo.png"
 
 const Navbar = () => {
   return (
@@ -48,7 +49,8 @@ const Navbar = () => {
           </div>
         </div>
         <div className="navbar-center">
-          <a className=" text-2xl text-pri-green font-semibold"><b className="text-sec">Kin</b>Kepper</a>
+          <Link to='/'>
+          <img src={logo} alt="Logo" /></Link>
         </div>
         <div className="navbar-end hidden md:flex gap-1.5">
           <NavLink to="/">
