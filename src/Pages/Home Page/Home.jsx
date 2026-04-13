@@ -1,9 +1,17 @@
 import React from 'react';
+import Hero from './Hero';
+import Friends from './Friends';
+
 
 const Home = () => {
+        
+    
+    
     return (
-        <div>
-            This is home Pae
+        <div className='container-main my-5 '>
+            <Hero></Hero>
+
+            <Friends></Friends>
         </div>
     );
 };
