@@ -15,20 +15,20 @@ const Friends = () => {
            {/* Status Bar */}
            <div className='grid  grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6'>
             <div className='text-center  border rounded-lg  py-7 border-black/10'>
-                <h1 className='text-3xl text-pri-green font-semibold'>10</h1>
+                <h1 className='text-3xl text-pri-green font-semibold'>{api.length}</h1>
                 <p className='text-text-sec'>Total Friends</p>
             </div>
             <div className='text-center  border rounded-lg  py-7 border-black/10'>
-                <h1 className='text-3xl text-pri-green font-semibold'>10</h1>
-                <p className='text-text-sec'>Total Friends</p>
+                <h1 className='text-3xl text-pri-green font-semibold'>3</h1>
+                <p className='text-text-sec'>On Track</p>
             </div>
             <div className='text-center  border rounded-lg  py-7 border-black/10'>
-                <h1 className='text-3xl text-pri-green font-semibold'>10</h1>
-                <p className='text-text-sec'>Total Friends</p>
+                <h1 className='text-3xl text-pri-green font-semibold'>6</h1>
+                <p className='text-text-sec'>Need Attention</p>
             </div>
             <div className='text-center  border rounded-lg  py-7 border-black/10'>
-                <h1 className='text-3xl text-pri-green font-semibold'>10</h1>
-                <p className='text-text-sec'>Total Friends</p>
+                <h1 className='text-3xl text-pri-green font-semibold'>12</h1>
+                <p className='text-text-sec'>Interactions This Month</p>
             </div>
 
            </div>
@@ -40,7 +40,7 @@ const Friends = () => {
             <h1 className='text-2xl font-semibold'>Your Friends </h1>
             
             {
-                loading? <Loading></Loading>:<div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6'>
+                loading? <Loading></Loading>:<div className='grid  md:grid-cols-2 lg:grid-cols-4 gap-6'>
                 {
                     api.map((user)=><User key={user.id} user={user}></User>)
                 }

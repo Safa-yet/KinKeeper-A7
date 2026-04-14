@@ -15,7 +15,7 @@ const useFriendsApi = () => {
                 setApi(data);
                 setLoading(false)
                 
-            }, 1000);
+            }, 500);
 
         }
 

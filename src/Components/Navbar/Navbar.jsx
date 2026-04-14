@@ -8,7 +8,7 @@ import logo from "../../assets/logo.png"
 const Navbar = () => {
   return (
     <div className="shadow-sm">
-      <div className="navbar bg-base-100 container mx-auto justify-between">
+      <div className="navbar bg-base-100 md:w-11/12 mx-auto justify-between">
         <div className="navbar-start md:hidden">
           <div className="dropdown">
             <div
@@ -34,7 +34,7 @@ const Navbar = () => {
             </div>
             <ul
               tabIndex="-1"
-              className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
+              className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3  p-2 shadow"
             >
               <li>
                 <Link to="/">Home</Link>

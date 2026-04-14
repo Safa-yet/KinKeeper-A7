@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { useParams } from "react-router";
 import useFriendsApi from "../../Hooks/useFriendsApi";
 import { MdOutlineSnooze } from "react-icons/md";
@@ -8,25 +8,36 @@ import { TbBrush } from "react-icons/tb";
 import callImg from '../../assets/call.png';
 import textImg from '../../assets/text.png';
 import videoImg from '../../assets/video.png';
+import { toast } from "react-toastify";
+import { CallContext } from "../../Context Data/CallingContext";
 
 const UserDetails = () => {
   const { id } = useParams();
-  console.log(id);
   const { api, setApi, loading } = useFriendsApi();
 
+  
+  
   if (loading) {
-    return (
-      <>
+      return (
+          <>
         <Loading></Loading>
       </>
     );
-  }
+}
+const {call,setCall,text,setText,videoCall , setVideoCall,callHandler,textHandler,videoHandler} = useContext(CallContext)
 
   // const [findUser, setFindUser]= useState();
 
   const matchUser = api.find((user) => user.id === parseInt(id));
   // console.log(matchUser.name);
   const {name, picture, days_since_contact, tags, status, bio,goal,next_due_date } = matchUser;
+
+
+
+  console.log("CAll",call);
+  console.log("TExt",text);
+  console.log("video",videoCall);
+
 
   return (
     <div className="bg-gray-300 py-12">
@@ -91,7 +102,7 @@ const UserDetails = () => {
               </div>
             </div>
 
-            <div className="lg:row-span-2 col-span-3 bg-white flex justify-between py-8 px-6 rounded-lg items-center">
+           <div className="lg:row-span-2 col-span-3 bg-white flex justify-between py-8 px-6 rounded-lg items-center">
               <div>
                 <h1 className="lg:text-xl  font-semibold mb-3 text-pri-green">Relationship Goal</h1>
 
@@ -106,16 +117,16 @@ const UserDetails = () => {
               <div className="grid lg:grid-cols-3 gap-6 ">
                 
                  
-                <button className=" btn h-full flex-col py-2 lg:py-4">
-                  <img src={callImg} alt="" srcset="" className="mx-auto mb-2.5"/>
+                <button className=" btn h-full flex-col py-2 lg:py-4" onClick={()=>callHandler(matchUser)}>
+                  <img src={callImg} alt="" srcset="" className="mx-auto mb-1"/>
                   <p className="font-semibold">Call</p>
                 </button>
-                <button className=" btn h-full flex-col  py-2 lg:py-4">
-                  <img src={textImg} alt="" srcset="" className="mx-auto mb-2.5"/>
+                <button className=" btn h-full flex-col  py-2 lg:py-4" onClick={()=>textHandler(matchUser)}>
+                  <img src={textImg} alt="" srcset="" className="mx-auto mb-1"/>
                   <p className="font-semibold">Text</p>
                 </button>
-                <button className=" btn h-full flex-col py-2 lg:py-4">
-                  <img src={videoImg} alt="" srcset="" className="mx-auto mb-2.5"/>
+                <button className=" btn h-full flex-col py-2 lg:py-4" onClick={()=>videoHandler(matchUser)}>
+                  <img src={videoImg} alt="" srcset="" className="mx-auto mb-1"/>
                   <p className="font-semibold">Video</p>
                 </button>
               </div>

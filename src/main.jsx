@@ -1,37 +1,37 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './index.css'
-import { createBrowserRouter, RouterProvider } from 'react-router'
-import Roots from './Router/Roots.jsx'
-import Home from './Pages/Home Page/Home.jsx'
-import Timeline from './Pages/Timeline Page/Timeline.jsx'
-import Stats from './Pages/Stats Page/Stats.jsx'
-import UserDetails from './Components/User Details/UserDetails.jsx'
-
-
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
+import "./index.css";
+import { createBrowserRouter, RouterProvider } from "react-router";
+import Roots from "./Router/Roots.jsx";
+import Home from "./Pages/Home Page/Home.jsx";
+import Timeline from "./Pages/Timeline Page/Timeline.jsx";
+import Stats from "./Pages/Stats Page/Stats.jsx";
+import UserDetails from "./Components/User Details/UserDetails.jsx";
+import { ToastContainer } from "react-toastify";
+import CallingContext from "./Context Data/CallingContext.jsx";
 
 const router = createBrowserRouter([
   {
     path: "/",
     Component: Roots,
-    children:[
+    children: [
       {
-      index : true,
-      Component:Home
-    },
-    {
-      path : '/timeline',
-      Component: Timeline
-    },
-    {
-      path : '/stats',
-      Component : Stats
-    },
-    {
-      path: '/user/:id',
-      Component : UserDetails
-    }
-  ]
+        index: true,
+        Component: Home,
+      },
+      {
+        path: "/timeline",
+        Component: Timeline,
+      },
+      {
+        path: "/stats",
+        Component: Stats,
+      },
+      {
+        path: "/user/:id",
+        Component: UserDetails,
+      },
+    ],
   },
   // {
   //   path : "*",
@@ -39,8 +39,23 @@ const router = createBrowserRouter([
   // }
 ]);
 
-createRoot(document.getElementById('root')).render(
+createRoot(document.getElementById("root")).render(
   <StrictMode>
-   <RouterProvider router={router}></RouterProvider>
+    <CallingContext>
+      <RouterProvider router={router}></RouterProvider>
+      <ToastContainer
+position="top-center"
+autoClose={1000}
+hideProgressBar={false}
+newestOnTop={false}
+closeOnClick={false}
+rtl={false}
+pauseOnFocusLoss
+draggable
+pauseOnHover
+theme="dark"
+
+/>
+    </CallingContext>
   </StrictMode>,
-)
+);
