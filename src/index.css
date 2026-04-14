@@ -17,7 +17,8 @@
 
 .container-main {
     @apply
-    max-w-[70%] mx-auto
+    lg:max-w-[70%] mx-auto
+    max-w-11/12
 }
 
 

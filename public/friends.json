@@ -9,7 +9,7 @@
     "tags": ["college", "close friend"],
     "bio": "We studied Computer Science together at university. She now works as a UI/UX designer and loves traveling.",
     "goal": 14,
-    "next_due_date": "2026-04-10"
+    "next_due_date": "Apr-10, 2026"
   },
   {
     "id": 2,
@@ -21,7 +21,7 @@
     "tags": ["school", "football"],
     "bio": "Played football together in school. He still plays in a local club and follows international leagues closely.",
     "goal": 12,
-    "next_due_date": "2026-04-16"
+    "next_due_date": "Apr-16, 2026"
   },
   {
     "id": 3,
@@ -33,7 +33,7 @@
     "tags": ["work", "marketing"],
     "bio": "Worked together on a marketing campaign project. Very creative and always shares new ideas.",
     "goal": 10,
-    "next_due_date": "2026-04-20"
+    "next_due_date": "Apr-20, 2026"
   },
   {
     "id": 4,
@@ -45,7 +45,7 @@
     "tags": ["gym", "fitness"],
     "bio": "Gym partner who helped me stay consistent during my fitness journey. Very disciplined and motivating.",
     "goal": 15,
-    "next_due_date": "2026-04-08"
+    "next_due_date": "Apr-8, 2026"
   },
   {
     "id": 5,
@@ -57,7 +57,7 @@
     "tags": ["family friend"],
     "bio": "Family friend since childhood. We often meet during festivals and family gatherings.",
     "goal": 14,
-    "next_due_date": "2026-04-15"
+    "next_due_date": "Apr-15, 2026"
   },
   {
     "id": 6,
@@ -69,7 +69,7 @@
     "tags": ["business", "networking"],
     "bio": "Met at a startup networking event. He runs an e-commerce business and shares valuable insights.",
     "goal": 10,
-    "next_due_date": "2026-04-22"
+    "next_due_date": "Apr-22, 2026"
   },
   {
     "id": 7,
@@ -81,7 +81,7 @@
     "tags": ["neighbor"],
     "bio": "Grew up in the same neighborhood. We used to spend evenings chatting on the rooftop.",
     "goal": 12,
-    "next_due_date": "2026-04-12"
+    "next_due_date": "Apr-12, 2026"
   },
   {
     "id": 8,
@@ -93,7 +93,7 @@
     "tags": ["developer", "tech"],
     "bio": "A fellow developer friend. We often discuss React, Next.js, and new tech trends.",
     "goal": 10,
-    "next_due_date": "2026-04-17"
+    "next_due_date": "Apr-17, 2026"
   },
   {
     "id": 9,
@@ -105,7 +105,7 @@
     "tags": ["university", "group study"],
     "bio": "We used to prepare for exams together. She is now pursuing her master's degree abroad.",
     "goal": 7,
-    "next_due_date": "2026-04-25"
+    "next_due_date": "Apr-25, 2026"
   },
   {
     "id": 10,
@@ -117,6 +117,6 @@
     "tags": ["travel", "adventure"],
     "bio": "Travel buddy for multiple trips across Bangladesh. Loves exploring new places and trying local food.",
     "goal": 14,
-    "next_due_date": "2026-04-09"
+    "next_due_date": "Apr-9, 2026"
   }
 ]
