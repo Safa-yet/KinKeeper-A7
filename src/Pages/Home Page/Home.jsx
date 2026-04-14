@@ -8,10 +8,12 @@ const Home = () => {
     
     
     return (
-        <div className='container-main my-5 '>
+        <div className='bg-base-100'>
+            <div className='container-main py-8 '>
             <Hero></Hero>
 
             <Friends></Friends>
+        </div>
         </div>
     );
 };

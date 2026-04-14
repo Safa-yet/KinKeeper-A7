@@ -4,7 +4,7 @@ import { Link } from "react-router";
 const User = ({ user }) => {
   const { id,name, picture, days_since_contact, status, tags }= user
   return (
-    <Link to={`/user/${id}`} className="card bg-base-500  shadow-xl items-center justify-center hover:-translate-y-1 duration-500 transition">
+    <Link to={`/user/${id}`} className="card bg-white  shadow-xl items-center justify-center hover:-translate-y-1 duration-500 transition">
       <figure className="px-10 pt-10">
         <img 
           src={picture}

@@ -37,9 +37,9 @@ const Footer = () => {
         <div className="flex justify-between text-sm text-gray-300">
           <p>Copyright © {new Date().getFullYear()} - All right reserved</p>
           <div className="space-x-2.5">
-            <a href="#">Privacy Policy</a>
-            <a href="#">Teams of Service</a>
-            <a href="#">Cookies</a>
+            <a href="*">Privacy Policy</a>
+            <a href="*">Teams of Service</a>
+            <a href="*">Cookies</a>
           </div>
         </div>
       </div>

@@ -40,7 +40,7 @@ const {call,setCall,text,setText,videoCall , setVideoCall,callHandler,textHandle
 
 
   return (
-    <div className="bg-gray-300 py-12">
+    <div className="bg-gray-100 py-12">
       <div className="container-main mx-auto grid lg:grid-cols-3 gap-6">
         {/* left sie */}
         <div className="flex flex-col gap-4   ">

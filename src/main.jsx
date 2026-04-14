@@ -9,6 +9,8 @@ import Stats from "./Pages/Stats Page/Stats.jsx";
 import UserDetails from "./Components/User Details/UserDetails.jsx";
 import { ToastContainer } from "react-toastify";
 import CallingContext from "./Context Data/CallingContext.jsx";
+import EroorPage from "./Pages/Error Page/ErrorPage.jsx";
+import ErrorPage from "./Pages/Error Page/ErrorPage.jsx";
 
 const router = createBrowserRouter([
   {
@@ -33,10 +35,10 @@ const router = createBrowserRouter([
       },
     ],
   },
-  // {
-  //   path : "*",
-  //   element: <h1>This is erorafasjdfgasdf</h1>
-  // }
+  {
+    path : "*",
+    Component : ErrorPage
+  }
 ]);
 
 createRoot(document.getElementById("root")).render(
