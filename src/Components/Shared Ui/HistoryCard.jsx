@@ -19,7 +19,11 @@ const HistoryCard = ({ item }) => {
             <b> with {item.name}</b>
           </div>
           <div className="text-xs uppercase font-semibold opacity-60">
-            {new Date().toLocaleDateString()}
+            {new Date().toLocaleDateString("en-us",{
+              day: "numeric",
+              month : "long",
+              year : "numeric"
+            })}
           </div>
         </div>
       </li>

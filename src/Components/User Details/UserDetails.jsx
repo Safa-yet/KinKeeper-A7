@@ -30,7 +30,7 @@ const {call,setCall,text,setText,videoCall , setVideoCall,callHandler,textHandle
 
   const matchUser = api.find((user) => user.id === parseInt(id));
   // console.log(matchUser.name);
-  const {name, picture, days_since_contact, tags, status, bio,goal,next_due_date } = matchUser;
+  const {name, picture, days_since_contact, tags, status, bio,goal,next_due_date,email } = matchUser;
 
 
 
@@ -53,6 +53,11 @@ const {call,setCall,text,setText,videoCall , setVideoCall,callHandler,textHandle
               <p className="text-text-sec font-semibold">
                 {days_since_contact}d ago
               </p>
+              <div
+                className={`badge ${status === "overdue" ? "badge-error" : status === "almost due" ? "badge-warning" : "badge-success"} rounded-2xl`}
+              >
+                {status}
+              </div>
               <div className="space-x-1.5">
                 {tags.map((tag) => (
                   <div className="badge badge-soft badge-success uppercase text-sm rounded-2xl">
@@ -60,16 +65,12 @@ const {call,setCall,text,setText,videoCall , setVideoCall,callHandler,textHandle
                   </div>
                 ))}
               </div>
-              <div
-                className={`badge ${status === "overdue" ? "badge-error" : status === "almost due" ? "badge-warning" : "badge-success"} rounded-2xl`}
-              >
-                {status}
-              </div>
               <p className="text-text-sec">{bio}</p>
+              <p>Email : {email}</p>
             </div>
           </div>
 
-          <button className="bg-white btn rounded-lg">
+          <button className="bg-white btn rounded-lg ">
             <MdOutlineSnooze />
             Snooze 2 Weeeks{" "}
           </button>

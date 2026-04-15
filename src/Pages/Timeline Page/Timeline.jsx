@@ -1,41 +1,28 @@
 import React, { useContext, useState } from "react";
 import { CallContext } from "../../Context Data/CallingContext";
 import HistoryCard from "../../Components/Shared Ui/HistoryCard";
-import EmptyImg from "../../assets/empty message.gif"
-
+import EmptyImg from "../../assets/empty message.gif";
 
 const Timeline = () => {
   const {
     call,
-    setCall,
     text,
-    setText,
     videoCall,
-    setVideoCall,
-    callHandler,
-    textHandler,
-    videoHandler,
     tab,
-    setTab,timeline
+    setTab,
+    timeline,
   } = useContext(CallContext);
 
   // const [timeLine ,setTimeLine] = useState([]);
 
   //   const timeline = [...call, ...text, ...videoCall];
 
+  const filteredData =
+    tab === "all" || tab === ""
+      ? timeline
+      : timeline.filter((item) => item.type === tab);
+  console.log("Timeline", timeline);
 
-
-//   ===========================================
-
-
-
-  const filteredData = tab === "all" || tab === ""? timeline
-    : timeline.filter(item => item.type === tab);
-  console.log('Timeline', timeline);
-
-
-
-//   ===========================================================
   console.log("call", call);
   console.log("text", text);
   console.log("Video", videoCall);
@@ -50,28 +37,28 @@ const Timeline = () => {
         className="select"
         onChange={(e) => setTab(e.target.value)}
       >
-        <option value='all'>All History</option>
+        <option value="all">All History</option>
         <option value="call">Call History</option>
         <option value="text">Text History</option>
         <option value="video">Video Call History</option>
       </select>
 
+      {filteredData.length === 0 ? (
+        <>
+          <div className=" flex flex-col items-center justify-center gap-3 my-4 ">
+            <img src={EmptyImg} alt="" className="rounded-2xl" />
+            <h1 className="lg:text-2xl text-text-sec">No Activity Yet</h1>
+          </div>
+        </>
+      ) : (
+        <div className="space-y-3 my-6">
+          {filteredData.map((item) => (
+            <HistoryCard key={item.id} item={item} />
+          ))}
+        </div>
+      )}
 
-     {
-        filteredData.length === 0 ? <><div className=" flex flex-col items-center justify-center gap-3 my-4 ">
-            <img src={EmptyImg} alt="" className="rounded-2xl"/>
-            <h1 className="lg:text-2xl text-text-sec">No Activity Yet</h1></div></>   :<div className="space-y-3 my-6">
-  {filteredData.map(item => (
-    <HistoryCard key={item.id} item={item} />
-  ))}
-</div>
-
-
-     } 
-     
-     
-     
-{/* 
+      {/* 
       {tab == "call" && (
         <>
           <div className="space-y-3">
