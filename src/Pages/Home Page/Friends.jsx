@@ -9,7 +9,7 @@ const Friends = () => {
   const { api, setApi, loading } = useFriendsApi();
 
 
-  const [search,setSearch] =useState(''),
+  const [search,setSearch] =useState('');
   // console.log( 'this is freidn',api);
 
   return (
