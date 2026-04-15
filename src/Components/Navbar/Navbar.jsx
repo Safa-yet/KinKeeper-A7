@@ -7,7 +7,7 @@ import logo from "../../assets/logo.png"
 
 const Navbar = () => {
   return (
-    <div className="shadow-sm">
+    <div className="shadow-sm sticky top-0 z-50">
       <div className="navbar bg-base-100 md:w-11/12 mx-auto justify-between">
         <div className="navbar-start md:hidden">
           <div className="dropdown">
