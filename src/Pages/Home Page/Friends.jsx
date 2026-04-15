@@ -1,16 +1,22 @@
 import React, { useState } from "react";
 import useFriendsApi from "../../Hooks/useFriendsApi";
-import { data } from "react-router";
+
 import User from "../../Components/Shared Ui/User";
 import { Triangle } from "react-loader-spinner";
 import Loading from "../../Components/Shared Ui/Loading";
 
 const Friends = () => {
-  const { api, setApi, loading } = useFriendsApi();
+  const { api, loading } = useFriendsApi();
 
 
   const [search,setSearch] =useState('');
   // console.log( 'this is freidn',api);
+
+
+  const filterUser = api.filter((user)=>user.name.toLowerCase().includes(search.toLowerCase()))
+
+  console.log(filterUser);
+  console.log(search);
 
   return (
     <div className="space-y-14">
@@ -59,15 +65,17 @@ const Friends = () => {
                 <path d="m21 21-4.3-4.3"></path>
               </g>
             </svg>
-            <input type="search" required placeholder="Search" />
+            <input type="search" required placeholder="Search" onChange={(i)=> setSearch(i.target.value)}/>
           </label>
         </div>
+
+
 
         {loading ? (
           <Loading></Loading>
         ) : (
           <div className="grid  md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {api.map((user) => (
+            {filterUser.map((user) => (
               <User key={user.id} user={user}></User>
             ))}
           </div>

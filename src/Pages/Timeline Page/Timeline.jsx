@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import { CallContext } from "../../Context Data/CallingContext";
 import HistoryCard from "../../Components/Shared Ui/HistoryCard";
 import EmptyImg from "../../assets/empty message.gif";

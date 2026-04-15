@@ -8,12 +8,11 @@ import { TbBrush } from "react-icons/tb";
 import callImg from '../../assets/call.png';
 import textImg from '../../assets/text.png';
 import videoImg from '../../assets/video.png';
-import { toast } from "react-toastify";
 import { CallContext } from "../../Context Data/CallingContext";
 
 const UserDetails = () => {
   const { id } = useParams();
-  const { api, setApi, loading } = useFriendsApi();
+  const { api, loading } = useFriendsApi();
 
   
   
@@ -24,7 +23,7 @@ const UserDetails = () => {
       </>
     );
 }
-const {call,setCall,text,setText,videoCall , setVideoCall,callHandler,textHandler,videoHandler} = useContext(CallContext)
+const {call,text,videoCall ,callHandler,textHandler,videoHandler} = useContext(CallContext)
 
   // const [findUser, setFindUser]= useState();
 
